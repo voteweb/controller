@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "uglify-js": "^3.15.3",
+    "yuicompressor": "^2.4.8"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Voteweb">
+    <meta name="copyright" content="Voteweb">
+    <link href="/controller/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3">
+    <link rel="stylesheet" href="/controller/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/controller/css/app.min.css">
+    <title>Contrôler l’intégrité de votre bulletin de vote</title>
+</head>
+<body class="bg-light">
+<div class="container border rounded-2 bg-white mt-md-4">
+    <header class="border-bottom">
+        <h1 class="text-center mt-2 text-uppercase py-2 fs-2 text-white rounded-2 ff-georgia bg-darkblue">
+            <i class="bi bi-shield-fill-check text-white"></i> Application de contrôle de vote
+        </h1>
+    </header>
+    <main class="p-3 row">
+        <div class="col-xl-8 offset-xl-2">
+            <h2 class="text-center mb-4 fs-3">Contrôler l’intégrité de votre bulletin de vote</h2>
+            <form id="control-form" data-control-type="integrity">
+                <div class="alert alert-blue">
+                    <p>
+                        Conformément aux objectifs de sécurité 2-07 et 3-02 de la délibération de la CNIL n°2019-053,
+                        cette page vous permet de vous assurer que votre bulletin a bien été construit.
+                    </p>
+                    <p class="mb-0">
+                        Collez ci-dessous les éléments de contrôle de construction du bulletin qui vous ont été
+                        transmis sur la page de prévisualisation de vote.
+                    </p>
+                </div>
+                <div data-error-panel class="alert alert-danger text-center d-none" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="control-elements" class="form-label">
+                        <i class="bi bi-clipboard2-check-fill"></i> Éléments de contrôle :
+                    </label>
+                    <textarea class="form-control h-150px" id="control-elements" rows="3"></textarea>
+                </div>
+                <p class="text-center mt-2">
+                    <button type="submit" class="btn btn-green btn-lg">
+                        <i class="bi bi-patch-check-fill"></i>
+                        Contrôler
+                    </button>
+                </p>
+            </form>
+        </div>
+    </main>
+    <footer class="mb-2 rounded-2 bg-darkblue">
+        <div class="text-white text-center">
+            <small>
+                Page déployée automatiquement depuis le <i class="bi bi-github"></i>
+                <a href="https://github.com/voteweb/controller" class="text-white" target="_blank"> dépôt public Github</a>
+                - © <a href="https://www.voteweb.fr" class="text-white" target="_blank">www.voteweb.fr</a>
+            </small>
+        </div>
+    </footer>
+</div>
+<script src="/controller/js/forge.min.js"></script>
+<script src="/controller/js/app.min.js"></script>
+</body>
+</html>
